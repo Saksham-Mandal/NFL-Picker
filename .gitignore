@@ -1,0 +1,17 @@
+# Python
+.venv/
+nfl-backend/venv/
+*.pyc
+__pycache__/
+
+# Node
+nfl-frontend/node_modules/
+nfl-frontend/dist/
+
+# Environment files
+*.env
+.env
+.env.local
+
+# MacOS stuff
+.DS_Store

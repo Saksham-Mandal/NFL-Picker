@@ -1,0 +1,86 @@
+/* --- tokens / base --- */
+:root{
+  --bg:#0f1115;         /* tweak to your theme */
+  --card:#111418;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --border:#242833;
+  --ring:#2563eb;
+  --radius:12px;
+}
+
+*{ box-sizing:border-box }
+html,body,#root{ height:100% }
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  line-height:1.4;
+}
+a{ color:inherit; text-decoration:none }
+button{ font:inherit; cursor:pointer; border:none; background:none; color:inherit }
+
+/* --- app layout --- */
+.app-main{
+  max-width:1100px; margin:0 auto; padding:20px;
+}
+
+/* --- navbar --- */
+.navbar{
+  position:sticky; top:0; z-index:40;
+  background:var(--bg);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:saturate(180%) blur(6px);
+}
+.navbar-inner{
+  max-width:1100px; margin:0 auto; padding:12px 20px;
+  display:flex; align-items:center; gap:16px;
+}
+.brand{ font-weight:700; font-size:18px; letter-spacing:.2px }
+.nav{ display:flex; gap:8px; margin-left:12px }
+.nav-link{
+  padding:8px 12px; border-radius:10px; border:1px solid transparent;
+}
+.nav-link:hover{ background:#ffffff10 }
+.nav-link.active{ border-color:var(--border); background:#ffffff14 }
+
+.nav-right{ margin-left:auto; display:flex; align-items:center; gap:10px }
+.user{ opacity:.8 }
+.btn{
+  padding:8px 12px; border-radius:10px; border:1px solid var(--border); background:#1a1f29;
+}
+.btn:hover{ background:#232937 }
+
+.header {
+  padding: 1px;
+  background-color:#000000;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.heading{ display:flex; align-items:center; gap:16px; margin-bottom:16px }
+.heading .meta{ margin-left:auto; opacity:.75 }
+
+.matchup-grid{
+  list-style:none; padding:0; margin:0;
+  display:grid; gap:12px;
+  grid-template-columns: 1fr; /* one column; change to repeat(auto-fill, minmax(320px,1fr)) if you want cards */
+}
+
+.matchup-card{
+  border:1px solid var(--border, #242833);
+  border-radius:12px; background:#111418; padding:16px;
+}
+
+.matchup-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:8px }
+.matchup-top .teams span{ opacity:.6; margin:0 6px }
+.venue{ opacity:.7 }
+
+.matchup-actions{ display:flex; gap:8px; align-items:center }
+.btn{
+  padding:8px 12px; border-radius:10px;
+  border:1px solid var(--border, #242833); background:#1a1f29; color:inherit;
+}
+.btn:hover{ background:#232937 }
+.picked{ outline:2px solid var(--ring, #2563eb); background:#172554 }
+.pick-text{ margin-left:auto; opacity:.8 }
